@@ -11,7 +11,7 @@ function SelectedContact({selectedContactId, setSelectedContactId}){
             console.log(contact)
         }
         getContact();
-        console.log("Got contacts")
+        console.log("Got contact", selectedContactId)
     })
     
     return(
@@ -21,7 +21,7 @@ function SelectedContact({selectedContactId, setSelectedContactId}){
             contact ? (
                 <div>
                     <p>Name: {contact.name}</p>
-                    <p>Email: {contact.zipcode}</p>
+                    <p>Email: {contact.email}</p>
                     <p>Phone: {contact.phone}</p>
                 </div>
             ) :

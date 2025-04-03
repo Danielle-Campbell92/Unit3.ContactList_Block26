@@ -11,7 +11,7 @@ const dummyContacts = [
 
 function ContactList({setSelectedContactId}){
 const [contacts, setContacts] = useState([])    
-console.log("Contacts:", contacts)
+console.log("Contacts:", contacts, dummyContacts)
 
 
 
@@ -43,7 +43,7 @@ return(
               <td>Phone</td>
             </tr>
                {contacts.map((contact)=>{
-                return <ContactRow key={contact.id} contact={contact}/>
+                return <ContactRow key={contact.id} setSelectedContactId={setSelectedContactId} contact={contact}/>
                })}
           </tbody>
         </table>
